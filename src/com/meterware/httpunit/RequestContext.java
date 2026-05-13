@@ -33,13 +33,13 @@ class RequestContext {
 
     private ArrayList _newResponses = new ArrayList();
 
-   void addNewResponse( WebResponse response ) {
+    void addNewResponse( WebResponse response ) {
         _newResponses.add( response );
     }
 
 
     void runScripts() throws SAXException {
-        for (Iterator iterator = _newResponses.iterator(); iterator.hasNext();) {
+        for (Iterator iterator = _newResponses.iterator(); iterator.hasNext();) { // TODO?
             WebResponse response = (WebResponse) iterator.next();
             HttpUnitOptions.getScriptingEngine().load( response );
         }

@@ -201,7 +201,7 @@ public class JavaScript {
                 e.printStackTrace();
                 throw new ScriptException( errorMessage );
             } else {
-                _errorMessages.add( errorMessage );
+                _errorMessages.add( errorMessage ); // TODO
             }
         }
 

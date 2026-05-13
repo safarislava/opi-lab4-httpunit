@@ -84,10 +84,10 @@ abstract public class HTMLParserFactory {
      */
     public static HTMLParser getHTMLParser() {
         if (_htmlParser == null) {
-            if (_nekoParser != null) {
-                _htmlParser = _nekoParser;
-            } else if (_jtidyParser != null) {
+            if (_jtidyParser != null) { // TODO
                 _htmlParser = _jtidyParser;
+            } else if (_nekoParser != null) {
+                _htmlParser = _nekoParser;
             } else {
                 throw new RuntimeException( "No HTML parser found. Make sure that either nekoHTML.jar or Tidy.jar is in the in classpath" );
             }
