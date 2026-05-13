@@ -27,6 +27,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.io.IOException;
 import java.net.URL;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.mozilla.javascript.*;
 import org.xml.sax.SAXException;
@@ -201,7 +203,7 @@ public class JavaScript {
                 e.printStackTrace();
                 throw new ScriptException( errorMessage );
             } else {
-                _errorMessages.add( errorMessage ); // TODO
+                Logger.getLogger("global").log(Level.WARNING, errorMessage, e);
             }
         }
 
