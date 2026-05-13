@@ -203,7 +203,7 @@ public class JavaScript {
                 e.printStackTrace();
                 throw new ScriptException( errorMessage );
             } else {
-                Logger.getLogger("global").log(Level.WARNING, errorMessage, e);
+                Logger.getLogger("javascript").log(Level.WARNING, errorMessage, e);
             }
         }
 
