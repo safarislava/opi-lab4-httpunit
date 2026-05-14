@@ -36,8 +36,6 @@ public class Main {
      */
     public static void main(String[] args) {
         try {
-            Logger.getLogger("global").setLevel(Level.SEVERE);
-            Logger.getLogger("javascript").setLevel(Level.SEVERE);
             HttpUnitOptions.setExceptionsThrownOnScriptError(false);
             ServletRunner sr = new ServletRunner();
             sr.registerServlet("myServlet", HelloWorld.class.getName());

@@ -47,6 +47,13 @@ public class JavaScript {
 
     private static ArrayList _errorMessages = new ArrayList();
 
+    private static final Logger LOGGER = Logger.getLogger("javascript");
+
+    static {
+        LOGGER.setLevel(Level.SEVERE);
+        LOGGER.setUseParentHandlers(false);
+    }
+
 
     static boolean isThrowExceptionsOnError() {
         return _throwExceptionsOnError;
@@ -203,7 +210,7 @@ public class JavaScript {
                 e.printStackTrace();
                 throw new ScriptException( errorMessage );
             } else {
-                Logger.getLogger("javascript").log(Level.WARNING, errorMessage, e);
+                LOGGER.log(Level.WARNING, errorMessage, e);
             }
         }
 
